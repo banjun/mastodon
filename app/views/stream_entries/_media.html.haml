@@ -1,4 +1,6 @@
 .media-item
   = link_to media.remote_url.blank? ? media.file.url(:original) : media.remote_url, style: media.image? ? "background-image: url(#{media.file.url(:original)})" : "", target: '_blank', rel: 'noopener', class: "u-#{media.video? || media.gifv? ? 'video' : 'photo'}" do
     - unless media.image?
-      %video{ src: media.file.url(:original), autoplay: true, loop: true }/
+      // TODO: branch when livephoto
+      %div{ 'data-live-photo': "", 'data-photo-src': media.file.url(:small), 'data-video-src': media.file.url(:original), class: "u-video", style: "width: 320px; height: 320px;"}
+      // %video{ src: media.file.url(:original), autoplay: true, loop: true }/
