@@ -3712,6 +3712,10 @@ lexical-scope@^1.2.0:
   dependencies:
     astw "^2.0.0"
 
+livephotoskit@^1.4.8:
+  version "1.4.9"
+  resolved "https://registry.yarnpkg.com/livephotoskit/-/livephotoskit-1.4.9.tgz#9345c063692fce650ec1dc55387c7c6efbdc1a64"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -5242,6 +5246,12 @@ react-komposer@^2.0.0:
     lodash.pick "^4.4.0"
     react-stubber "^1.0.0"
     shallowequal "^0.2.2"
+
+react-livephoto@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/react-livephoto/-/react-livephoto-0.5.1.tgz#09c6d2cffa0fd71b3078b181247e9a17a52b42fa"
+  dependencies:
+    livephotoskit "^1.4.8"
 
 react-modal@^1.2.0, react-modal@^1.2.1:
   version "1.5.2"

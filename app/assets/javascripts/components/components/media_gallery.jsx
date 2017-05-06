@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import IconButton from './icon_button';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import { isIOS } from '../is_mobile';
+import LivePhoto from 'react-livephoto';
 
 const messages = defineMessages({
   toggle_visible: { id: 'media_gallery.toggle_visible', defaultMessage: 'Toggle visibility' }
@@ -93,19 +94,10 @@ class Item extends React.PureComponent {
       const autoPlay = !isIOS() && this.props.autoPlayGif;
 
       thumbnail = (
-        <div className={`media-gallery__gifv ${autoPlay ? 'autoplay' : ''}`}>
-          <video
-            className='media-gallery__item-gifv-thumbnail'
-            role='application'
-            src={attachment.get('url')}
-            onClick={this.handleClick}
-            autoPlay={autoPlay}
-            loop={true}
-            muted={true}
-          />
-
-          <span className='media-gallery__gifv__label'>GIF</span>
-        </div>
+	<LivePhoto width={240} height={240}
+	      imageSrc={attachment.get('preview_url')}
+	      videoSrc={attachment.get('url')}
+	      />
       );
     }
 
